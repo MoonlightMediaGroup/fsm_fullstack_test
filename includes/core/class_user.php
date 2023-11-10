@@ -138,7 +138,7 @@ class User {
         $plot_id = isset($d['plot_id']) && trim($d['plot_id']) ? trim($d['plot_id']) : '';
         $offset = isset($d['offset']) ? preg_replace('~\D+~', '', $d['offset']) : 0;
 
-        if(!$first_name || !$last_name || !$phone || !$email || !$plot_id) die();
+        if(!$first_name || !$last_name || !$phone || !$email) die();
         // update
         if ($user_id) {
             $set = [];
